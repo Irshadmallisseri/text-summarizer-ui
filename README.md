@@ -1,12 +1,69 @@
-# React + Vite
+# AI Summarizer (React + FastAPI)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern web app for summarizing **text** and **audio** using a FastAPI backend and a Bootstrap-powered React frontend.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Features
 
-## Expanding the ESLint configuration
+- 📝 Paste or type text to summarize instantly.
+- 🎙 Upload audio (MP3, WAV, etc.) and receive a transcription + summary.
+- ⚡ Smooth animated UI with Framer Motion.
+- 📁 Download the summary or copy it to clipboard.
+- 🌐 Backend integration using environment variables.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 🛠 Tech Stack
+
+- **Frontend**: React, Bootstrap, Framer Motion, Axios
+- **Backend**: FastAPI
+- **API**:
+  - `POST /api/v1/summarize-text` — JSON: `{ text: "..." }`
+  - `POST /api/v1/transcribe-audio` — FormData: `{ file }`
+
+---
+
+## 📦 Setup Instructions
+
+### 1. Clone and Install
+```bash
+git clone <your-repo-url>
+cd summarizer-app
+npm install
+```
+
+### 2. Environment Variables
+
+Create a `.env` file in the root:
+
+```env
+VITE_API_BASE_URL=http://localhost:8000
+```
+
+### 3. Run the App
+```bash
+npm run dev
+```
+
+---
+
+## 🧪 Usage
+
+- Choose **Enter Text** or **Upload Audio**
+- Input text or select an audio file
+- Click **Summarize**
+- View, copy, or download your summary
+
+---
+
+## 📂 File Structure
+- `App.jsx` – main React component
+- `.env` – stores API URL
+- `vite.config.js` – Vite config
+
+---
+
+## 📄 License
+
+MIT
